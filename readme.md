@@ -87,3 +87,108 @@ Comando para acessar uma pasta anterior
 ```
 rm -rf projetoBackend
 ```
+Clonar o repositório na sua máquina
+```
+git clone URL_REPOSITORIO
+```
+Acessar pasta
+```
+cd NOME_REPOSITORIO
+```
+Reinstalar os pacotes da aplicação
+```
+npm i
+```
+Criar arquivo .env na raiz do projeto
+```
+nano .env
+```
+Digitar no arquivo .env
+```
+PORT = 3008
+```
+Adicionar arquivo .env no .gitignore
+```
+nano .gitignore
+```
+```
+.env
+```
+Abrir o VSCode
+```
+code .
+```
+Criar arquivo de exemplo para para as variáveis necessárias da aplicação
+```
+nano .env.example
+```
+Adicionar no arquivo .env.example
+```
+PORT = 
+```
+Abrir o arquivo app.js e digitar o código
+```
+const express = require('express');
+```
+Importar o pacote dotenv, gerenciador de variáveis de ambiente
+```
+const dotenv = require('dotenv').config();
+```
+Instanciar o express na variável app
+```
+const app = express();
+```
+const app = express();
+```
+Setar a porta do servidor a partir do arquivo .env
+```
+app.set('port', process.env.PORT || 3333);
+```
+Exportar as configurações na variável app
+```
+module.exports = app;
+```
+Abrir o arquivo server.js e digitar os códigos
+```
+const app = require('./app');
+```
+Importar a porta do servidor
+```
+const port = app.get('port');
+```
+Testar API com a função listen
+```
+app.listen(port, () => {
+    console.log(`Running on port ${ port }!`);
+});
+```
+Abrir o arquivo package.json e alterar a chave 'scripts'
+```
+"start":"nodemon src/server.js"
+```
+Rodar o comando no termial com gitBash
+```
+npm run start
+```
+Atualizar projeto no gitHub
+```
+git add .
+```
+Salvar projeto e escrever comentário sobre o processo realizado
+```
+git commit -m 'configuração do projeto'
+```
+Enviar os arquivos atualizados para o gitHub
+```
+git push
+```
+Atualize a página no gitHub e verifique se os arquivos foram atualizados
+```
+cd ..
+```
+Comando para acessar uma pasta anterior
+```
+rm -rf projetoBackend
+```
+Conclusão do Passo 2
+```
